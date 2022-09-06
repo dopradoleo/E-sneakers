@@ -15,3 +15,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.air {
+  height: 190px;
+}
+.airNav{
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  padding:1.0rem 5%;
+  border-bottom: var(--border);
+  position: fixed;
+  top:0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+.counter {
+  width: fit-content;
+  background-color: #212121;
+  margin: auto;
+  padding: 4px;
+  text-align: center;
+  height: 65px;
+}
+
+.botonCount1 {
+  width: fit-content;
+  background-color:#212121;
+  color: #DC28A3 ;
+  margin: auto;
+  padding: 9px;
+  text-align: center;
+}
+.botonCount2{
+  width: fit-content;
+  background-color:#212121;
+  color: #DC28A3  ;
+  margin: auto;
+  padding: 9px;
+  text-align: center;
+
+}
+.spanCount{
+  width: fit-content;
+  background-color:#212121 ;
+  color: white;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+.airContent{
+  background-color: #212121;
+}
+.airAction{
+  background-color: #212121;
+}
+.tituloAir {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: orange;
+}

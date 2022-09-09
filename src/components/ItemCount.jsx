@@ -1,35 +1,32 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { Button} from '@mui/material';
 import { ShoppingCartCheckout } from '@mui/icons-material';
-import {createTheme} from "@mui/material/styles"
-
-const theme = createTheme({
-    palette:{
-        secondary:{
-            main:"#DC28A3",
-        }
-    }
-})
 
 const IteamCount = ({initial,stock,onAdd}) => {
-    const [count,setCount] = useState(initial);
+    const [count,setCount] = useState(0);
+    
+    useEffect(()=>{
+        setCount(initial);
+    },[]);
 
     const decrease = () => {
-        setCount(count -1 );
+        if(count > initial){
+            setCount(count -1 );
+        }
     };
 
     const increase = () => {
-        setCount(count + 1);
+        if(count < stock){
+            setCount(count + 1);
+        }
     }
     return(
         <div className='counter'>
-            <button className='botonCount1' disabled={count <= 1} onClick={decrease}>-</button>
-            <span className='spanCount'>{count}</span>
-            <button className='botonCount2' disabled={count >= stock} onClick={increase}>+</button>
-            <div>
-            <Button theme={theme} disabled={stock <= 0} onClick={() => onAdd(count) }  color='secondary'><ShoppingCartCheckout theme={theme} color="secondary"></ShoppingCartCheckout>Comprar</Button>
+            <Button onClick={decrease} variant='contained' color='secondary'>-</Button>
+            <Button variant='text' color='secondary'>{count}</Button>
+            <Button className='botonCount2' disabled={count >= stock} onClick={increase} variant='contained' color='secondary'>+</Button>
+            <Button onClick={() => onAdd(count) }  color='secondary'><ShoppingCartCheckout  color="secondary"></ShoppingCartCheckout>Agregar</Button>
             </div>
-        </div>
     )
 }
 

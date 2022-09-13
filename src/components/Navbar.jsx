@@ -8,9 +8,6 @@ const theme = createTheme({
         primary:{
             main:"#212121" 
         },
-        secondary:{
-            main:"#F9F7F4 "
-        },
         warning:{
             main:"#DC28A3 "
         }
@@ -28,9 +25,10 @@ const Navbar = () => {
                 <Typography variant="h6" component="div" sx={{flexGrow:1}}>
                     E-Sneakers
                 </Typography>
-                <Stack direction="row" spacing={2}>
-                    <Button theme={theme} color="secondary">INICIO</Button>
-                    <Button theme={theme} color="inherit">PRODUCTOS</Button>
+                <Stack direction='row' spacing={3} position='unset'>
+                    <Button theme={theme} color="inherit" variant="text">NIKE JORDAN</Button>
+                    <Button theme={theme} color="inherit">VANS</Button>
+                    <Button theme={theme} color='inherit'>JORDAN RETRO</Button>
                     <Button theme={theme} color="secondary"><CartWidget></CartWidget></Button>
                 </Stack>
             </Toolbar>

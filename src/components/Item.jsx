@@ -15,7 +15,7 @@ const Item = ({info}) => {
         <>
         <Grid Card xs={2.5}>
         <Card className="cardAir"  sx={{ maxWidth: 300 }} >
-                <CardMedia image={info.image}className='air' alt="nikejordan1"/>
+                <CardMedia image={info.image} className='aair' alt="nikejordan1"/>
                     <CardContent className='airContent'>
                         <Typography  theme={theme} gutterBottom variant="h5" component="div" color="secondary">
                             {info.name}

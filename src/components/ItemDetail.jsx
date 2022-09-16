@@ -2,8 +2,14 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import {Card, CardContent, CardMedia, Typography } from '@mui/material';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({data}) => {
+
+    const onAdd = (quantity) => {
+        alert(`Agregaste ${quantity} Air Jordan 1 al carrito`);
+
+    }
     return (
         <React.Fragment>
             <CssBaseline />
@@ -17,6 +23,7 @@ const ItemDetail = ({data}) => {
                     <Typography color='inherit' variant='spam'>{data.stock}</Typography>
                 </CardContent>
                 </Card>
+                <ItemCount display='flex' initial={1} stock={5} onAdd={onAdd} ></ItemCount>
             </Container>
         </React.Fragment>
     );

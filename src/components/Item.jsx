@@ -1,6 +1,7 @@
 import React from "react"
 import { Card,CardMedia,CardContent,Typography,CardActions,Button,Grid} from "@mui/material";
 import { createTheme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
     palette:{
@@ -24,7 +25,7 @@ const Item = ({info}) => {
                         <Typography textAlign='end' variant='caption' theme={theme} color='secondary'>{info.stock}</Typography>
                     </CardContent>
                     <CardActions className='airAction'>
-                        <Button className="buton" variant='contained' color='secondary'>Detalle</Button>
+                        <Link to={`/detail/${info.id}`}><Button className="buton" variant='contained' color='secondary'>Detalle</Button></Link>
                     </CardActions>
         </Card>
         </Grid>
